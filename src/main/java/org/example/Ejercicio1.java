@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Ejercicio1 {
     static void main() {
-        
+
         Scanner entrada = new Scanner(System.in);
         System.out.println("¿Cual es tu nombre?: ");
         String nombre = entrada.nextLine();
