@@ -10,6 +10,7 @@ public class multiplicaciones_3_cifras {
         String numero_string = Integer.toString(numero);
         String nums1 = numero_string.substring(0,1);
         String nums2 = numero_string.substring(1,2);
+
         String nums3 = numero_string.substring(2,3);
         int numero1 = Integer.parseInt(nums1);
         int numero2 = Integer.parseInt(nums2);
@@ -48,23 +49,37 @@ public class multiplicaciones_3_cifras {
                    /*Estoy pidiendo el segundo numero de 3 cifras y guardandolo en la variable num2*/
                    System.out.println("Introduce el segundo numero de 3 cifras: ");
                    num2 = entrada.nextInt();
+                   estado = false;
                } while (num2 < NUM_MIN  || num2 > NUM_MAX);
            }catch (InputMismatchException e){
            entrada.nextLine();
            }
        } while(estado);
+       //En la linea siguiente estoy haciendo que el int pase a string
         String numero_string = Integer.toString(num2);
+        //Aqui estoy dividiendo en partes las tres cifras para luego usarlas por separado
         String nums1 = numero_string.substring(0,1);
         String nums2 = numero_string.substring(1,2);
         String nums3 = numero_string.substring(2,3);
+        //Aqui los vuelvo int de nuevo y asi poder usarlos ne operacioes
         int numero1 = Integer.parseInt(nums1);
         int numero2 = Integer.parseInt(nums2);
         int numero3 = Integer.parseInt(nums3);
-
+        //son los resultados que da al multiplicar cada numero por num1
+        int result1 = num1 * numero1;
+        int result2 = num1 * numero2;
+        int result3 = num1 * numero3;
         /* Estoy haciendo una variable multiplicando los dos numero que he pedido antes*/
         int resultado = num1*num2;
+        //Y aqui estoy mostrando por pantalla todo el proceso de la multiplicacion
         System.out.println("El producto de la multiplicacion es: " + resultado);
-        System.out.println("El proceso es: ");
-
+        System.out.println("    " + num1 + "    ");
+        System.out.println("  X " + num2 + "    ");
+        System.out.println("-----------");
+        System.out.println("    " + result3 + "    ");
+        System.out.println("   " + result2 + "    ");
+        System.out.println("  " + result1 + "    ");
+        System.out.println("-----------");
+        System.out.println(resultado);
     }
 }
