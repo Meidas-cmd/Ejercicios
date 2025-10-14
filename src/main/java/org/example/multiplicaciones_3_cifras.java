@@ -20,9 +20,10 @@ public class multiplicaciones_3_cifras {
         Scanner entrada = new Scanner(System.in);
         int num1 = 0;
         /*Estoy definiendo el minimo de los numeros*/
+
         final int NUM_MIN = 99;
         /*Estoy definiendo el numero maximo*/
-        final int NUM_MAX = 1000;
+        final int NUM_MAX = 999;
 
         boolean estado = true;
         do {
