@@ -105,6 +105,50 @@ public class Bateria_T2 {
             System.out.println("Las dos frases son iguales");
         }
         */
+        /*
+        //Ejercicio 3
+        System.out.println("Introduce los numeros");
+        int numero = entrada.nextInt();
+        System.out.printf("Cuantas cifras quieres eliminar");
+        int delete = entrada.nextInt();
+
+        String numero_string = Integer.toString(numero);
+        int tamanyo = numero_string.length();
+        int sobrante = tamanyo - delete;
+
+        String resultado = numero_string.substring(0,sobrante);
+        System.out.println(resultado);
+        */
+        /*
+        //Ejercicio 4
+        System.out.println("Introduce una cadena de palabras");
+        String frase = entrada.nextLine();
+        System.out.println("Que palabra quieres quitar");
+        String palabra = entrada.nextLine();
+
+        int frase_tamnyo = frase.length();
+        int palabra_tamnyo = palabra.length();
+
+        String frase_sin = frase.replace(palabra,"");
+        int sin_tamanyo = frase_sin.length();
+        int total = frase_tamnyo - sin_tamanyo;
+        int veces = total / palabra_tamnyo;
+        System.out.println(veces);
+        */
+         //Ejercicio 5
+        //TEMA 2 Practica 1
+        int TAMNYO_FECHA = 10;
+        System.out.println("Introduce una fecha con este formato(dd-mm-aaaa");
+        String fecha = entrada.nextLine();
+        int tamnyo = fecha.length();
+        char buscar_formato1 = fecha.charAt(2);
+        char buscar_formato2 = fecha.charAt(5);
+        char formato = '-';
+        if (buscar_formato2 == formato && buscar_formato1 == formato && tamnyo == TAMNYO_FECHA){
+               
+        }
+
+
     }
 
 }
