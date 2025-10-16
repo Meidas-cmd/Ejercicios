@@ -1,6 +1,8 @@
 package org.example;
 
+import javax.swing.*;
 import java.sql.SQLOutput;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Bateria_T2 {
@@ -135,20 +137,65 @@ public class Bateria_T2 {
         int veces = total / palabra_tamnyo;
         System.out.println(veces);
         */
-         //Ejercicio 5
+        //Ejercicio 5
         //TEMA 2 Practica 1
         int TAMNYO_FECHA = 10;
-        System.out.println("Introduce una fecha con este formato(dd-mm-aaaa");
+        boolean estado = false;
+        int dia = 0;
+        int mes = 0;
+        int anyo = 0;
+
+        System.out.println("Introduce una fecha con este formato(dd-mm-aaaa)");
         String fecha = entrada.nextLine();
         int tamnyo = fecha.length();
-        char buscar_formato1 = fecha.charAt(2);
-        char buscar_formato2 = fecha.charAt(5);
-        char formato = '-';
-        if (buscar_formato2 == formato && buscar_formato1 == formato && tamnyo == TAMNYO_FECHA){
-               
+
+        if (tamnyo == TAMNYO_FECHA ) {
+            char buscar_formato1 = fecha.charAt(2);
+            char buscar_formato2 = fecha.charAt(5);
+            char formato = '-';
+            if (buscar_formato1 == formato && buscar_formato2 == formato) {
+                String num1 = fecha.substring(0, 2);
+                String num2 = fecha.substring(3, 5);
+                String num3 = fecha.substring(6);
+                try {
+                    dia = Integer.parseInt(num1);
+                    mes = Integer.parseInt(num2);
+                    anyo = Integer.parseInt(num3);
+                    estado = true;
+
+                } catch (Exception e) {
+                    System.out.println("No has introducido numeros en la fecha: ");
+                }
+            }
+            if (estado){
+            if (anyo <= 2025 && anyo >= 1900 && mes >= 1 && mes <= 12 && dia >= 1 && dia <= 31) {
+                int suma = dia + mes + anyo;
+                System.out.println(dia + "+" + mes + "+" + anyo + "=" + suma);
+                String ult_anyo = Integer.toString(suma);
+                String num_uno = ult_anyo.substring(0, 1);
+                String num_dos = ult_anyo.substring(1, 2);
+                String num_tres = ult_anyo.substring(2, 3);
+                String num_cuatro = ult_anyo.substring(3, 4);
+                int suma1 = Integer.parseInt(num_uno);
+                int suma2 = Integer.parseInt(num_dos);
+                int suma3 = Integer.parseInt(num_tres);
+                int suma4 = Integer.parseInt(num_cuatro);
+                int total = suma1 + suma2 + suma3 + suma4;
+                System.out.println(suma1 + "+" + suma2 + "+" + suma3 + "+" + suma4 + "=" + total);
+                System.out.println("Tu numero de la suerte es = " + total);
+
+            } else {
+                System.out.println("Formato incorrecto: ");
+            }
+            }
+        } else {
+            System.out.println("Formato incorrecto: ");
         }
-
-
     }
-
 }
+
+
+
+
+
+
