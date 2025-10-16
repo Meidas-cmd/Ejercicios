@@ -138,62 +138,74 @@ public class Bateria_T2 {
         System.out.println(veces);
         */
         //Ejercicio 5
-        //TEMA 2 Practica 1
+
+
+        //TEMA 2 Practica 1 Numero de la suerte
+        //Estoy creando variables y constantes
         int TAMNYO_FECHA = 10;
         boolean estado = false;
         int dia = 0;
         int mes = 0;
         int anyo = 0;
-
+        //Estoy pidiendo la fecha para guardarla en la variable fecha
         System.out.println("Introduce una fecha con este formato(dd-mm-aaaa)");
         String fecha = entrada.nextLine();
+        //Primero compruebo que haya introducido 10 caracteres sean numeros o letras y lo hago con length
         int tamnyo = fecha.length();
-
-        if (tamnyo == TAMNYO_FECHA ) {
+        if (tamnyo == TAMNYO_FECHA) {
+            //Ahora empiezo a comprobar el formato sea correcto
             char buscar_formato1 = fecha.charAt(2);
             char buscar_formato2 = fecha.charAt(5);
             char formato = '-';
             if (buscar_formato1 == formato && buscar_formato2 == formato) {
+                //Despues de comprobar el formato cogo los "numeros" para comprobar que sean numeros y no otro caracter
                 String num1 = fecha.substring(0, 2);
                 String num2 = fecha.substring(3, 5);
                 String num3 = fecha.substring(6);
+
                 try {
+                    //Uso el parseInt para comprobar que sean numeros y aprovecho para cambiarlos de String a int
                     dia = Integer.parseInt(num1);
                     mes = Integer.parseInt(num2);
                     anyo = Integer.parseInt(num3);
+                    //esta variable sirve para no repetir dos mensajes
                     estado = true;
 
                 } catch (Exception e) {
                     System.out.println("No has introducido numeros en la fecha: ");
                 }
-            }
-            if (estado){
-            if (anyo <= 2025 && anyo >= 1900 && mes >= 1 && mes <= 12 && dia >= 1 && dia <= 31) {
-                int suma = dia + mes + anyo;
-                System.out.println(dia + "+" + mes + "+" + anyo + "=" + suma);
-                String ult_anyo = Integer.toString(suma);
-                String num_uno = ult_anyo.substring(0, 1);
-                String num_dos = ult_anyo.substring(1, 2);
-                String num_tres = ult_anyo.substring(2, 3);
-                String num_cuatro = ult_anyo.substring(3, 4);
-                int suma1 = Integer.parseInt(num_uno);
-                int suma2 = Integer.parseInt(num_dos);
-                int suma3 = Integer.parseInt(num_tres);
-                int suma4 = Integer.parseInt(num_cuatro);
-                int total = suma1 + suma2 + suma3 + suma4;
-                System.out.println(suma1 + "+" + suma2 + "+" + suma3 + "+" + suma4 + "=" + total);
-                System.out.println("Tu numero de la suerte es = " + total);
+            }else {System.out.println("Formato incorrecto: ");}
+                //el if es para comprobar que los numeros sean numeros y asi continaur
+                if (estado == true) {
+                    //Ahora empiezo a poner los limites de la fecha
+                    if (anyo <= 2025 && anyo >= 1900 && mes >= 1 && mes <= 12 && dia >= 1 && dia <= 31) {
+                        //Empiezo ha hacer los procedimientos para la numerologia y mostrarlos en pantalla
+                        int suma = dia + mes + anyo;
+                        System.out.println(dia + "+" + mes + "+" + anyo + "=" + suma);
+                        String ult_anyo = Integer.toString(suma);
+                        //aqui cogo un numero en string
+                        String num_uno = ult_anyo.substring(0, 1);
+                        String num_dos = ult_anyo.substring(1, 2);
+                        String num_tres = ult_anyo.substring(2, 3);
+                        String num_cuatro = ult_anyo.substring(3, 4);
+                        // Lo paso a numero con parseInt
+                        int suma1 = Integer.parseInt(num_uno);
+                        int suma2 = Integer.parseInt(num_dos);
+                        int suma3 = Integer.parseInt(num_tres);
+                        int suma4 = Integer.parseInt(num_cuatro);
+                        //sumo los numeros para ver cual es el numero de la suerte
+                        int total = suma1 + suma2 + suma3 + suma4;
+                        System.out.println(suma1 + "+" + suma2 + "+" + suma3 + "+" + suma4 + "=" + total);
+                        System.out.println("Tu numero de la suerte es = " + total);
 
-            } else {
-                System.out.println("Formato incorrecto: ");
+                    } else {
+                        //Por si no cumple los limites de la fecha
+                        System.out.println("Formato incorrecto: ");
+                    }
+                }
+                }
             }
-            }
-        } else {
-            System.out.println("Formato incorrecto: ");
         }
-    }
-}
-
 
 
 
