@@ -139,7 +139,7 @@ public class Bateria_T2 {
         */
         //Ejercicio 5
 
-
+        /*
         //TEMA 2 Practica 1 Numero de la suerte
         //Estoy creando variables y constantes
         int TAMNYO_FECHA = 10;
@@ -152,7 +152,7 @@ public class Bateria_T2 {
         String fecha = entrada.nextLine();
         //Primero compruebo que haya introducido 10 caracteres sean numeros o letras y lo hago con length
         int tamnyo = fecha.length();
-        if (tamnyo == TAMNYO_FECHA) {
+            if (tamnyo == TAMNYO_FECHA) {
             //Ahora empiezo a comprobar el formato sea correcto
             char buscar_formato1 = fecha.charAt(2);
             char buscar_formato2 = fecha.charAt(5);
@@ -177,36 +177,38 @@ public class Bateria_T2 {
             }else {System.out.println("Formato incorrecto: ");}
                 //el if es para comprobar que los numeros sean numeros y asi continaur
                 if (estado == true) {
-                    //Ahora empiezo a poner los limites de la fecha
-                    if (anyo <= 2025 && anyo >= 1900 && mes >= 1 && mes <= 12 && dia >= 1 && dia <= 31) {
-                        //Empiezo ha hacer los procedimientos para la numerologia y mostrarlos en pantalla
-                        int suma = dia + mes + anyo;
-                        System.out.println(dia + "+" + mes + "+" + anyo + "=" + suma);
-                        String ult_anyo = Integer.toString(suma);
-                        //aqui cogo un numero en string
-                        String num_uno = ult_anyo.substring(0, 1);
-                        String num_dos = ult_anyo.substring(1, 2);
-                        String num_tres = ult_anyo.substring(2, 3);
-                        String num_cuatro = ult_anyo.substring(3, 4);
-                        // Lo paso a numero con parseInt
-                        int suma1 = Integer.parseInt(num_uno);
-                        int suma2 = Integer.parseInt(num_dos);
-                        int suma3 = Integer.parseInt(num_tres);
-                        int suma4 = Integer.parseInt(num_cuatro);
-                        //sumo los numeros para ver cual es el numero de la suerte
-                        int total = suma1 + suma2 + suma3 + suma4;
-                        System.out.println(suma1 + "+" + suma2 + "+" + suma3 + "+" + suma4 + "=" + total);
-                        System.out.println("Tu numero de la suerte es = " + total);
+                     //Ahora empiezo a poner los limites de la fecha
+                    if (dia >= 1 && dia <= 31 && anyo <= 2025 && anyo >= 1900 && mes >= 1 && mes <= 12 ) {
+                            //Empiezo ha hacer los procedimientos para la numerologia y mostrarlos en pantalla
+                            int suma = dia + mes + anyo;
+                            System.out.println(dia + "+" + mes + "+" + anyo + "=" + suma);
+                            String ult_anyo = Integer.toString(suma);
+                            //aqui cogo un numero en string
+                            String num_uno = ult_anyo.substring(0, 1);
+                            String num_dos = ult_anyo.substring(1, 2);
+                            String num_tres = ult_anyo.substring(2, 3);
+                            String num_cuatro = ult_anyo.substring(3, 4);
+                            // Lo paso a numero con parseInt
+                            int suma1 = Integer.parseInt(num_uno);
+                            int suma2 = Integer.parseInt(num_dos);
+                            int suma3 = Integer.parseInt(num_tres);
+                            int suma4 = Integer.parseInt(num_cuatro);
+                            //sumo los numeros para ver cual es el numero de la suerte
+                            int total = suma1 + suma2 + suma3 + suma4;
+                            System.out.println(suma1 + "+" + suma2 + "+" + suma3 + "+" + suma4 + "=" + total);
+                            System.out.println("Tu numero de la suerte es = " + total);
 
-                    } else {
-                        //Por si no cumple los limites de la fecha
-                        System.out.println("Formato incorrecto: ");
+                        } else {
+                           //Por si no cumple los limites de la fecha
+                            System.out.println("Formato incorrecto: ");
+                        }
                     }
-                }
                 }
             }
         }
+         */
 
+    } }
 
 
 
