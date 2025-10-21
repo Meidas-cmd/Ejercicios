@@ -47,7 +47,7 @@ public class Actividad_case {
                 break;
             default:
                 System.out.println("Modo incorrecto");
-                break;
+                return;
         }
         if (anyo_nacimiento_int >= ANYO_MINIMO && anyo_nacimiento_int <= anyo_actual) {
             if (anyo_nacimiento_int <= 1927) {
