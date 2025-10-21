@@ -39,7 +39,9 @@ public class calculadora_simple {
         System.out.println("Elige un operador");
         String signo = entrada.next();
         //Aqui estoy haciendo un if para pedir el segundo operador en caso de que no sea raiz
-        if (signo.toLowerCase() != raiz){
+        if (signo.toLowerCase().equals(raiz)){
+
+        } else {
             //control de errores igual que en el primero
             do {
                 try {
