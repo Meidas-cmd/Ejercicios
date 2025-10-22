@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class calculadora_simple {
     static void main() {
         Scanner entrada = new Scanner(System.in);
+
         //Son constantes y una variable
         double resultado = 0;
          final int CERO = 0;
@@ -94,6 +95,7 @@ public class calculadora_simple {
                 System.out.println("No podemos realizar esa operacion");
                 break;
         }
+
 
 
     }
