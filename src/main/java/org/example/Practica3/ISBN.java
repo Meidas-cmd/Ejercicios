@@ -6,10 +6,13 @@ import java.util.Scanner;
 public class ISBN {
     static void main() {
         Scanner entrada = new Scanner(System.in);
+        boolean estado= true;
+        int posicion = 0;
         char num1;
         int num2;
         int num3=0;
         int j =1;
+        int tamanyo=0;
         String isbn= "0";
         System.out.println("-----------------");
         System.out.println("*Validador y reparador de ISBN*");
@@ -25,7 +28,7 @@ public class ISBN {
         }
         switch (modo){
             case "1":
-                int tamanyo = isbn.length();
+                tamanyo = isbn.length();
                 for (int i = tamanyo - 1; i >= 0; i--){
                     num1 = isbn.charAt(i);
                     if (num1 == 'x') {
@@ -43,6 +46,26 @@ public class ISBN {
                 }
                 break;
             case "2":
+                tamanyo = isbn.length();
+                for (int i = tamanyo - 1; i >= 0; i--){
+                    num1 = isbn.charAt(i);
+                    if (num1 == 'x') {
+                        num2 = 10;
+                    } else if (num1!='?') {
+                        num2 = Integer.parseInt(String.valueOf(num1));
+                    }
+                    else {
+                        num2=0;
+                        posicion=j;
+                    }
+                        num3 += num2*j;
+                        posicion=j;
+                }
+                if (num3%11==0){
+                    System.out.println("ISBN valido");
+                }else {
+
+                }
 
                 break;
             case "x":
