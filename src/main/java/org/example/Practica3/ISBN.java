@@ -13,6 +13,7 @@ public class ISBN {
         int num3=0;
         int j =1;
         int tamanyo=0;
+        int num5=0;
         String isbn= "0";
         System.out.println("-----------------");
         System.out.println("*Validador y reparador de ISBN*");
@@ -62,9 +63,14 @@ public class ISBN {
                         posicion=j;
                 }
                 if (num3%11==0){
-                    System.out.println("ISBN valido");
+                    System.out.println("El numero es 0");
                 }else {
-
+                    for (j=1;num3%11==0;j++){
+                        num3=num3-num5;
+                        num5=posicion*j;
+                        num3=num3+num5;
+                    }
+                    System.out.println("El numero es " + j);
                 }
 
                 break;
