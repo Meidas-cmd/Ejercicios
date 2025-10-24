@@ -90,6 +90,6 @@ public class BateriaT2_Bucles {
             letra = pal.charAt(i);
             System.out.print(letra);
         }
-        */
+    */
     }
 }
