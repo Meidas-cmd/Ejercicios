@@ -13,6 +13,7 @@ public class ISBN {
         int j = 1;
         int k =0;
         int tamanyo = 0;
+        boolean estado = false;
         String isbn = "0";
         System.out.println("-----------------");
         System.out.println("*Validador y reparador de ISBN*");
@@ -26,8 +27,9 @@ public class ISBN {
             System.out.println("Introduce un ISBN");
             isbn = entrada.next().toLowerCase();
             tamanyo = isbn.length();
+            estado = true;
         }
-        if (tamanyo == 10) {
+        if (tamanyo == 10 || modo.equals("x")) {
             switch (modo) {
                 case "1":
                     for (int i = tamanyo - 1; i >= 0; i--) {
@@ -51,10 +53,10 @@ public class ISBN {
                         num1 = isbn.charAt(i);
                         if (num1 == 'x') {
                             num2 = 10;
-                        } else if (num1=='?'){
-                        posicion = j;
-                            num2=0;
-                        }else {
+                        } else if (num1 == '?') {
+                            posicion = j;
+                            num2 = 0;
+                        } else {
                             num2 = Integer.parseInt(String.valueOf(num1));
                         }
                         num3 += num2 * j;
@@ -63,11 +65,11 @@ public class ISBN {
                     if (num3 % 11 == 0) {
                         System.out.println("El numero que falta es el 0");
                     } else {
-                        for ( k = 0; k <= 10; k++) {
+                        for (k = 0; k <= 10; k++) {
                             int sumaTest = num3 + k * posicion;
                             if (sumaTest % 11 == 0) {
                                 if (k == 10) {
-                                }else
+                                } else
                                     System.out.println("El número que falta es " + k);
                                 break;
                             }
@@ -76,13 +78,9 @@ public class ISBN {
                     break;
                 case "x":
                     System.out.println("Saliendo..");
-                    return;
-                default:
-                    System.out.println("No es un modo valido del programa");
-                    break;
             }
         }else {
-            System.out.println("El tamanño del ISBN es incorrecto");
+            System.out.println(" ISBN incorrecto");
         }
     }
 }
