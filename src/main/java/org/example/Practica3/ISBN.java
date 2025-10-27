@@ -11,10 +11,8 @@ public class ISBN {
         int num2;
         int num3 = 0;
         int j = 1;
+        int k =0;
         int tamanyo = 0;
-        int num5 = 0;
-        int z=0;
-        int x=0;
         String isbn = "0";
         System.out.println("-----------------");
         System.out.println("*Validador y reparador de ISBN*");
@@ -49,36 +47,35 @@ public class ISBN {
                     }
                     break;
                 case "2":
-
                     for (int i = tamanyo - 1; i >= 0; i--) {
                         num1 = isbn.charAt(i);
                         if (num1 == 'x') {
                             num2 = 10;
-                        } else if (num1 != '?') {
+                        } else if (num1=='?'){
+                        posicion = j;
+                            num2=0;
+                        }else {
                             num2 = Integer.parseInt(String.valueOf(num1));
-                        } else {
-                            num2 = 0;
-                            posicion = i;
                         }
                         num3 += num2 * j;
-                        posicion = j;
+                        j = j + 1;
                     }
                     if (num3 % 11 == 0) {
-                        System.out.println("El numero es 0");
+                        System.out.println("El numero que falta es el 0");
                     } else {
-                        for (z = num3; z > 0;x++) {
-
-                            num3 = num3 - num5;
-                            num5 = posicion * x;
-                            num3 = num3 + num5;
-                            z=num3%11;
-
+                        for ( k = 0; k <= 10; k++) {
+                            int sumaTest = num3 + k * posicion;
+                            if (sumaTest % 11 == 0) {
+                                if (k == 10) {
+                                }else
+                                    System.out.println("El número que falta es " + k);
+                                break;
+                            }
                         }
-                        System.out.println("El numero es " + x);
                     }
-
                     break;
                 case "x":
+                    System.out.println("Saliendo..");
                     return;
                 default:
                     System.out.println("No es un modo valido del programa");
