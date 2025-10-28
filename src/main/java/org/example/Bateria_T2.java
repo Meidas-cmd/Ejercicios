@@ -9,7 +9,7 @@ public class Bateria_T2 {
     static void main() {
         Scanner entrada = new Scanner(System.in);
         /*
-        // Explicacion de String y sus diferentes modos
+        // Explicacion de StringString y sus diferentes modos
         String frase= "Al palo juanfran del Atletico de Madrid palo";
 
         //Te dice el tamaño del string

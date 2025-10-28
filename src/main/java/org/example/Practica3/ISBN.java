@@ -72,7 +72,7 @@ public class ISBN {
                     if (num3 % 11 == 0) {
                         System.out.println("El numero que falta es el 0");
                     } else {
-                        for (k = 0; k <= 10; k++) {
+                        for (k = 1; k <= 10; k++) {
                             int sumaTest = num3 + k * posicion;
                             if (sumaTest % 11 == 0) {
                                 if (k == 10) {
