@@ -38,7 +38,7 @@ public class bateria_aleatorio {
             System.out.println(num_ale);
         }
         */
-        /*
+
         //Ejercicio 4
         String caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
         String letra = "";
@@ -57,11 +57,12 @@ public class bateria_aleatorio {
             } else if (cont == 2) {
                 letra += mayusculas.charAt(aleatorio.nextInt(mayusculas.length()-1));
                 cont = 3;
+
             }else {
                 letra += caracteres.charAt(aleatorio.nextInt(caracteres.length()-1));
             }
         }
         System.out.println(letra);
-        */
+
     }
 }
