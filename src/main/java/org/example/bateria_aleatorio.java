@@ -38,7 +38,7 @@ public class bateria_aleatorio {
             System.out.println(num_ale);
         }
         */
-
+/*
         //Ejercicio 4
         String caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
         String letra = "";
@@ -63,6 +63,6 @@ public class bateria_aleatorio {
             }
         }
         System.out.println(letra);
-
+*/
     }
 }
