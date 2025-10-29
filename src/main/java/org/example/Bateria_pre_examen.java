@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Bateria_pre_examen {
     static void main() {
         Scanner entrada = new Scanner(System.in);
+        /*
         //Ejercicio 1
         int num=0;
         String mayores="";
@@ -26,6 +27,21 @@ public class Bateria_pre_examen {
         System.out.println("Mayores que 0 son: " + mayores);
         System.out.println("Menores que 0 son: " + menores);
         System.out.println("Iguales que 0 son: " + iguales);
-
+*/
+        //Ejercicio 2
+        System.out.println("Dame el numero base del exponente");
+        int base = entrada.nextInt();
+        System.out.println("Dame el numero exponente(Tiene que ser positivo");
+        int exp = entrada.nextInt();
+        if (exp>0){
+            for (int i = 1;i<=exp;i++){
+                base  base;
+            }
+            System.out.println(base);
+        }else if (exp==0){
+            System.out.println("El resultado es 1");
+        } else{
+            System.out.println("No puede se menor de 0");
+        }
     }
 }
