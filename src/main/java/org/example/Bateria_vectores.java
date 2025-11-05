@@ -87,18 +87,13 @@ public class Bateria_vectores {
         System.out.println("Array original: " +Arrays.toString(vec));
         System.out.println("Array rotado: " + Arrays.toString(vec_rotado));
         */
+        /*
         //Ejercicio 6
         int respuesta = 0;
-        int vec[]= new int[aleatorio.nextInt(11)];
-        System.out.println("El tamaño es: "+ vec.length);
-        /*for (int i=0;i<vec.length-1;i++){
-            System.out.println(i +" Ingresa un numero");
-            respuesta = entrada.nextInt();
-            vec[i]=respuesta;
-        }*/
+        int vec[]= {1,2,3,2,1};
         int cont=0;
-        for (int j=0;j< vec.length/2;j++){
-            if (vec[j]==vec[vec.length-j]){
+        for (int j=0;j< (vec.length-1)/2;j++){
+            if (vec[j]==vec[vec.length-1-j]){
                  cont++;
             }
         }
@@ -107,5 +102,6 @@ public class Bateria_vectores {
         }else {
             System.out.println("Es simetrico: No");
         }
+        */
     }
 }
