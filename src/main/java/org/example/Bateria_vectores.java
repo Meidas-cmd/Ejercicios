@@ -1,5 +1,6 @@
 package org.example;
 
+import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
@@ -102,6 +103,96 @@ public class Bateria_vectores {
         }else {
             System.out.println("Es simetrico: No");
         }
+        */
+        /*
+        //Ejercicio 7
+        int vec[] = new int[3];
+        int vec1[] = new int[3];
+        for (int i=0 ;i<vec.length;i++){
+            vec[i] = aleatorio.nextInt(11);
+        }
+        for (int j = 0; j< vec1.length;j++){
+            vec1[j] = aleatorio.nextInt(11);
+        }
+        int vec_total[] = new int[vec.length+vec1.length];
+        for (int z=0; z< vec_total.length;z++){
+            if (z >=vec.length) {
+                vec_total[z] = vec1[z-3];
+            } else {
+                vec_total[z] = vec[z];
+            }
+        }
+        System.out.println("Array 1: " + Arrays.toString(vec));
+        System.out.println("Array 2: " + Arrays.toString(vec1));
+        System.out.println("Array combinado: "  + Arrays.toString(vec_total));
+        */
+        /*
+        //Ejercicio 8
+        int vec[] = new int[aleatorio.nextInt(11)];
+        for (int i=0; i< vec.length;i++){
+            vec[i]= aleatorio.nextInt(11);
+        }
+        System.out.println("Array original: " + Arrays.toString(vec));
+        System.out.println("Que numero quieres que insterte: ");
+        int num = entrada.nextInt();
+        System.out.println("En que posicion: ");
+        int pos = entrada.nextInt();
+        int vec1[]=new int[vec.length+1];
+        for (int j=0;j<vec1.length;j++){
+            if (j == pos){
+                vec1[j]=num;
+            } else if (j>pos) {
+                vec1[j]=vec[j-1];
+            }else {
+                vec1[j]=vec[j];
+            }
+        }
+        System.out.println("Array resultante: " + Arrays.toString(vec1));
+        */
+        /*
+        //Ejercicio 9
+        String vec[] = new String[aleatorio.nextInt(2,6)];
+        System.out.println(vec.length);
+        for (int i = 0;i< vec.length;i++){
+            System.out.println("Dame una palabra para el array: ");
+            vec[i] = entrada.next();
+        }
+        int tam = 0;
+        int pos =0;
+        for (int j =0;j<= vec.length;j++){
+            if (j== vec.length){
+                continue;
+            }else {
+            tam = vec[pos].length();
+                if (vec[j].length()>tam){
+                    pos = j;
+                }
+            }
+        }
+        for (int z=0;z< vec.length;z++){
+            if (z==pos){
+                System.out.println(vec[z]);
+            }
+        }
+        */
+        /*
+        //Ejercicio 10
+        System.out.println("Que tamaño quieres que tenga el array: ");
+        int tamanyo = entrada.nextInt();
+        String vec[] = new String[tamanyo];
+        for (int i = 0;i< vec.length;i++){
+            System.out.println("Dame una palabra para el array: ");
+            vec[i] = entrada.next();
+        }
+        System.out.println("Que letra quieres que busque: ");
+        char letra = entrada.next().charAt(0);
+        String pos ="";
+        for (int i =0;i<tamanyo;i++){
+            if (vec[i].charAt(0) == letra){
+                pos += " " + vec[i];
+            }
+        }
+        System.out.println("Las palabras que empiezan por " + letra + " son las siguientes:" + pos);
         */
     }
 }
