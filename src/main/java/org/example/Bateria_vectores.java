@@ -192,7 +192,7 @@ public class Bateria_vectores {
                 pos += " " + vec[i];
             }
         }
-        System.out.println("Las palabras que empiezan por " + letra + " son las siguientes:" + pos);
+          System.out.println("Las palabras que empiezan por " + letra + " son las siguientes:" + pos);
         */
     }
 }
