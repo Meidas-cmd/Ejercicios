@@ -17,6 +17,8 @@ public class Samurai {
         int num_equip = 1;
         int resultado1=0;
         int resultado2=0;
+        int bajas1 = 0;
+        int bajas2 = 0;
         do {
             total =0;
             System.out.println("Equipo " + num_equip + ": ");
@@ -44,11 +46,38 @@ public class Samurai {
         System.out.println("¿Empieza la batalla!");
         int iniciar = aleatorio.nextInt(1,8);
         System.out.println("La batalla empieza con el Samurai " + iniciar);
-        for (int i = iniciar; i<8;i++){
+        for (int i = iniciar; i<7;i++){
+            if (equipo1[i]>equipo2[i]) {
 
-            System.out.println("Samurai "+ i + " Gana Equipo: " + num_equip +" " + equipo1[i] +" vs " + equipo2[i]);
+                System.out.println("Samurai " + i + " Gana Equipo 1. " + equipo1[i] + " vs " + equipo2[i]);
+                bajas2++;
+            } else if (equipo1[i] < equipo2[i]){
+
+                System.out.println("Samurai " + i + " Gana Equipo 2. " + equipo1[i] + " vs " + equipo2[i]);
+                bajas1++;
+            }
+
         }
+        for (int i = 0; i<iniciar;i++){
 
+            if (equipo1[i]>equipo2[i]) {
+
+                System.out.println("Samurai " + i + " Gana Equipo 1. " + equipo1[i] + " vs " + equipo2[i]);
+                bajas2++;
+            } else if (equipo1[i] < equipo2[i]){
+
+                System.out.println("Samurai " + i + " Gana Equipo 2. " + equipo1[i] + " vs " + equipo2[i]);
+                bajas1++;
+            }
+
+        }
+        if (bajas1<bajas2){
+            System.out.println("¡Equipo 1 GANA! Equipo 2 ha tenido " + bajas2 + " bajas");
+        } else if (bajas1>bajas2) {
+            System.out.println("¡Equipo 2 GANA! Equipo 1 ha tenido " + bajas1 + " bajas");
+        } else {
+            System.out.println("¡EMPATE!");
+        }
 
     }
 }
