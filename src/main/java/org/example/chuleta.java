@@ -19,6 +19,8 @@ public class chuleta {
         //Para quitar numeros repetidos en vectores Arrays.stream().distinc().ToArray();
         int limpio[] = Arrays.stream(numeros).distinct().toArray();
         System.out.println(Arrays.toString(limpio));
+        //.matches("\\d{2}/\\d{2,4}") devuelve booleano
+
 
     }
 }
