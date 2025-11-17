@@ -26,7 +26,7 @@ public class Sorteo_Primitiva {
             //Pido al usuario que introduzca el boleto
             System.out.println("Introduce tu boleto (N-N-N-N-N-N/R):");
             boleto_usuario = entrada.next();
-            Arrays.sort(boleto_usu_final, 0, 6); // solo ordenamos los 6 números principales, no el reintegro(no sabia como hacerlo solo para esos numeros y lo he tenido que buscar(chatgpt))
+            Arrays.sort(boleto_usu_final, 0, 6); //  ordenamos los 6 números principales, no el reintegro(no sabia como hacerlo solo para esos numeros y lo he tenido que buscar(chatgpt))
             //Compruebo que el formato sea correcto usando matches
             boolean formatoCorrecto = boleto_usuario.matches("\\d{1,2}-\\d{1,2}-\\d{1,2}-\\d{1,2}-\\d{1,2}-\\d{1,2}/\\d{1}");
 
