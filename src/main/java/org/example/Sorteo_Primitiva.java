@@ -26,7 +26,7 @@ public class Sorteo_Primitiva {
             //Pido al usuario que introduzca el boleto
             System.out.println("Introduce tu boleto (N-N-N-N-N-N/R):");
             boleto_usuario = entrada.next();
-            Arrays.sort(boleto_usu_final, 0, 6); //  ordenamos los 6 números principales, no el reintegro(no sabia como hacerlo solo para esos numeros y lo he tenido que buscar(chatgpt))
+
             //Compruebo que el formato sea correcto usando matches
             boolean formatoCorrecto = boleto_usuario.matches("\\d{1,2}-\\d{1,2}-\\d{1,2}-\\d{1,2}-\\d{1,2}-\\d{1,2}/\\d{1}");
 
@@ -54,6 +54,8 @@ public class Sorteo_Primitiva {
 
                 //Si todo es correcto, confirmamos
                 if (rangoValido) {
+                    //Ordenamos los 6 números principales del usuario antes de comparar
+                    Arrays.sort(boleto_usu_final, 0, 6);
                     confirmado = true;
                 } else {
                     System.out.println("Uno o varios números están fuera de rango. Intenta de nuevo.");
@@ -132,7 +134,6 @@ public class Sorteo_Primitiva {
         boolean acierto_reintegro = boleto_usu_final[6].equals(reintegro[0]);
 
         //Muestro todos los resultados del sorteo
-        System.out.println("=== RESULTADOS DEL SORTEO ===");
         System.out.println("Tu boleto:        " + Arrays.toString(boleto_usu_final));
         System.out.println("Números premiados:" + Arrays.toString(boleto));
         System.out.println("Complementario:   " + complementario[0]);
@@ -140,7 +141,6 @@ public class Sorteo_Primitiva {
         System.out.println("Boleto final:     " + Arrays.toString(boleto_final));
 
         //Determino la categoría de premio según los aciertos
-        System.out.println("=== RESULTADO ===");
         if (aciertos == 6 && acierto_reintegro) {
             System.out.println("¡Categoría Especial! Has acertado 6 números + reintegro.");
         } else if (aciertos == 6) {
