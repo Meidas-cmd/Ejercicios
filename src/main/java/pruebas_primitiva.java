@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Sorteo_Primitiva {
+public class pruebas_primitiva {
 
     static void main() {
         //Creo esto para poder leer el boleto del usuario y generar números aleatorios
