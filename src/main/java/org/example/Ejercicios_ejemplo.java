@@ -32,8 +32,8 @@ public class Ejercicios_ejemplo {
         }
         */
         //Ejercicio 1 B
-        /*
-        int  bingo[][] = new int[3][3];
+/*
+        int  bingo[][] = new int[4][4];
         for (int i = 0 ; i< bingo.length;i++){
             for (int j = 0; j< bingo[0].length;j++){
                 bingo[i][j] = aleatorio.nextInt(11);
@@ -45,26 +45,25 @@ public class Ejercicios_ejemplo {
             }
             System.out.println();
         }
-        externo:
         for (int i = 0; i< bingo.length;i++){
             interno:
             for (int j = bingo[0].length -1;j>0;){
-                j= j-i;
-                System.out.print(bingo[i][j] + " ");
+                System.out.print(bingo[i][j-i] + " ");
                 break interno;
             }
         }
 */
         //Ejercicio 2
-        /*
+
         int matrizA[][]= new int[3][3];
+        int matrizB[][] = new int[3][3];
+
         for (int i = 0 ; i< matrizA.length;i++){
             for (int j = 0; j< matrizA[0].length;j++){
                 matrizA[i][j] = aleatorio.nextInt(11);
             }
         }
 
-        int matrizB[][] = new int[3][3];
         for (int i = 0 ; i< matrizB.length;i++){
             for (int j = 0; j< matrizB[0].length;j++){
                 matrizB[i][j] = aleatorio.nextInt(11);
@@ -104,7 +103,7 @@ public class Ejercicios_ejemplo {
             }
             System.out.println(" ");
         }
-        */
+
 
 
     }
